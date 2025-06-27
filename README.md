@@ -1,63 +1,90 @@
-# Poultry-Health-Hub-
+# PoultryGuard – A Deep Learning-Powered Web App for Poultry Disease Prediction using Transfer Learning.
 
-# Healthy vs Rotten Classifier - Flask App
+# PoultryGuard 🐔  
+### A Deep Learning Odyssey in Poultry Disease Detection via Transfer Learning
 
-📁 Project Structure
+This project is about creating a smart web application that can analyze an image of a chicken and predict the disease it might have. We use **Transfer Learning**, a powerful technique in **Artificial Intelligence**, to build a model trained on poultry images.
 
- # app.py
- # healthy_vs_rotten.h5         # Trained model
- # ipython.html                 # Image prediction UI
- # Readme.txt
- # templates/(blog.html,blog-single.html,index.html, portfolio-details.html)
-# static/(assets, forms,uploads)
+---
 
+## 🚀 Features
 
-🧠 Description
+- 🧠 **Transfer Learning** using MobileNetV2 / ResNet50
+- 🐓 **Detects multiple poultry diseases**, e.g., Newcastle, Salmonella, Coccidiosis, etc.
+- 🖼 Upload an image and get instant predictions
+- 📊 Displays prediction result with confidence score
+- 💻 Web interface built with Flask + HTML/CSS + Bootstrap
+- 💾 Trained model saved as `poultry_model.h5`
 
-This web application allows users to upload an image of food or waste,
-and the model classifies it as "Healthy" or "Rotten" using transfer learning (VGG16).
+---
 
-Flask is used as the backend framework and Keras is used for building the deep learning model.
+## 🛠 Project Development Workflow
 
-✅ Features:
-- Upload image and get instant classification
-- View model predictions
-- Basic blog and portfolio pages
+### 📁 1. Dataset Collection & Preparation
+The dataset is organized in folders for each disease:
 
+dataset/
+├── Coccidiosis/
+├── Salmonella/
+├── Newcastle/
+├── Marek/
+├── Healthy/
 
-⚙️ How to Run
----------------------
-1. Install dependencies:
+yaml
+Copy
+Edit
 
-    pip install flask tensorflow keras pillow
+- Each folder contains images labeled by disease.
+- Data is cleaned and resized to 224x224 pixels.
+- Augmentations used: rotation, flipping, zoom.
 
-2. Run the Flask app:
+---
 
-    python app.py
+### 🧹 2. Preprocessing
+- Images normalized to [0, 1] scale.
+- 80-20 split between training and validation.
+- Augmentation applied using Keras `ImageDataGenerator`.
 
-3. Open in browser:
+---
 
-    http://127.0.0.1:5000/ipython
+### 🧠 3. Model Building
+We use **Transfer Learning** with a pre-trained CNN model:
 
+python
+base_model = MobileNetV2(include_top=False, input_shape=(224,224,3), weights='imagenet')
+Custom dense layers added.
 
-📌 Notes
----------------------
-- Make sure `healthy_vs_rotten.h5` is in the root directory.
-- Uploaded images will be stored in `/static/uploads/`.
-- You can edit `ipython.html` for custom UI changes.
+Compiled with Adam, categorical_crossentropy, and accuracy.
 
+# 📈 4. Model Evaluation
+Accuracy & loss graphs plotted.
 
-🔧 Model Info
----------------------
-- Based on VGG16 (transfer learning)
-- Trained on custom dataset with two classes:
-    - Healthy
-    - Rotten
-# project details:
-Team ID : LTVIP2025TMID41509
+Confusion matrix + classification report generated.
 
-Team Size : 3
+Tested with unseen poultry images.
 
-Team Leader : Vaddimeyani Ajay Kumar
+💾 5. Model Saving
+python
+Copy
+Edit
+model.save("poultry_model.h5")
+🌐 Web App Preview
+# Project Lead: Vaddimeyani Ajaykumar
+# Team ID : LTVIP2025TMID41509
+# Team members : Vadlamudi Bavanchandu Y Lavanya
+# Email : Ajaykumarv2609@gmail.com
+# Smart Bridge Internship: https://apsche.smartinternz.com/ Developed as part of the Smart Bridge Artificial Intelligence and Machine learning Internship Program
 
-Team member : Vadlamudi Bavanchandu , Y Lavanya 
+⚙ Installation
+git clone https://github.com/yourusername/PoultryGuard.git
+cd PoultryGuard
+
+# Create environment
+conda create -n poultryguard python=3.9
+conda activate poultryguard
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run
+python app.py
