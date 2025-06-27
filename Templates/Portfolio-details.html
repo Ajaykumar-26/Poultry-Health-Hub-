@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ project.title }} | Portfolio Details</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>{{ project.title }}</h1>
+        <nav>
+            <a href="{{ url_for('index') }}">Home</a> |
+            <a href="{{ url_for('blog') }}">Blog</a> |
+            <a href="{{ url_for('portfolio_details', project_id=project.id) }}">Project</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <img src="{{ url_for('static', filename=project.image) }}" alt="{{ project.title }}" style="width:100%; max-width:600px;">
+            <h2>{{ project.subtitle }}</h2>
+            <p><strong>Date:</strong> {{ project.date.strftime('%B %d, %Y') }}</p>
+            <p><strong>Category:</strong> {{ project.category }}</p>
+            <div>
+                {{ project.description | safe }}
+            </div>
+        </section>
+
+        <section>
+            {% if project.link %}
+                <p><a href="{{ project.link }}" target="_blank">View Project</a></p>
+            {% endif %}
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 My Portfolio</p>
+        <a href="{{ url_for('index') }}">← Back to Home</a>
+    </footer>
+</body>
+</html>

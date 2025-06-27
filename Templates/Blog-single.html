@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ post.title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>{{ post.title }}</h1>
+        <p><em>By {{ post.author }} on {{ post.date_posted.strftime('%B %d, %Y') }}</em></p>
+    </header>
+
+    <article>
+        <img src="{{ url_for('static', filename=post.image) }}" alt="Blog Image" style="width:100%; max-width:600px;">
+        <div>
+            {{ post.content | safe }}
+        </div>
+    </article>
+
+    <footer>
+        <a href="{{ url_for('blog') }}">← Back to Blog</a>
+    </footer>
+</body>
+</html>
