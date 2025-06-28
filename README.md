@@ -71,7 +71,7 @@ model.save("poultry_model.h5")
 🌐 Web App Preview
 # Project Lead: Vaddimeyani Ajaykumar
 # Team ID : LTVIP2025TMID41509
-# Team members : Vadlamudi Bavanchandu Y Lavanya
+# Team members : Vadlamudi Bavanchandu ,Y Lavanya
 # Email : Ajaykumarv2609@gmail.com
 # Smart Bridge Internship: https://apsche.smartinternz.com/ Developed as part of the Smart Bridge Artificial Intelligence and Machine learning Internship Program
 # Demolink: https://drive.google.com/file/d/1pTcaClWY4CO2W57iC9vSlfgwn-49IzAe/view?usp=drivesdk
