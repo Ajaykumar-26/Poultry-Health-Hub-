@@ -77,7 +77,7 @@ model.save("poultry_model.h5")
 # Demolink: https://drive.google.com/file/d/1pTcaClWY4CO2W57iC9vSlfgwn-49IzAe/view?usp=drivesdk
 Developed as part of the Smart Bridge AI Internship Program.
 ⚙ Installation
-git clone https://github.com/yourusername/PoultryGuard.git
+git clone https://github.com/Ajaykumar-26/Poultry-Health-Hub-/tree/main?tab=readme-ov-file
 cd PoultryGuard
 
 # Create environment
