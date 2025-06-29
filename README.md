@@ -108,10 +108,7 @@ Running on http://YOUR_LOCAL_IP:5000 Press CTRL+C to quit
 poultry detect Classification Tool:
 Go to http://127.0.0.1:5000/ (for access from your local machine).
 If running on 0.0.0.0, others on your same local network can access it using your computer's local IP address.
-On the page, click "Choose File", select a blood cell image (JPEG or PNG), and click "Classify Image" to see the prediction.
-Interactive Project Overview (README):
-Go to http://127.0.0.1:5000/project-overview in your browser.
-This page provides a comprehensive, interactive overview of the project's details, features, and technical aspects.
+On the page, click "Choose File", select a poultry disease image (JPG or PNG), and click "Classify Image" to see the prediction.
 
 # Project Lead: Vaddimeyani Ajaykumar
 # Team ID : LTVIP2025TMID41509
