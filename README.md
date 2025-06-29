@@ -63,12 +63,56 @@ Confusion matrix + classification report generated.
 
 Tested with unseen poultry images.
 
-💾 5. Model Saving
-python
-Copy
-Edit
-model.save("poultry_model.h5")
-🌐 Web App Preview
+💾 5. Model Saving model.save("poultry_model.h5")
+# 📂 Project Structure The project directory (C:poultry detect/) is organized as follows:
+transfer learning-based classification of poultry diseases for enhanced/
+
+app.py
+
+trained_model.h5
+
+static/(Assets,forms,uplods)
+
+templates/(index.html, result.html)
+
+dataset/(Train,Test,Val,etc. folders)
+
+model/(Classification Report)
+
+README.md
+
+🚀 How to Run the Application Ensure all setup steps are completed (prerequisites and installation).
+Place your trained model file (trained_model.h5) directly in the C:\poultary health hub, next to app.py.
+Generate the Interactive Project Overview HTML: Run the conversion script to create templates/README_interactive_overview.html:
+python convert_readme.py
+
+Open Google colab,
+Navigate to your project's root directory:
+cd C:\poultry detect 
+
+Activate your google collab :
+run the code and get the expexted output 
+
+Start the Flask application:
+python app.py
+You should see output similar to this, indicating the server is running and the model loaded:
+
+✅ Model loaded successfully from C:\poultry health hub\trained_model.h5
+Serving Flask app 'app'
+Debug mode: on
+Running on all addresses (0.0.0.0)
+Running on http://127.0.0.1:5000/
+Running on http://YOUR_LOCAL_IP:5000 Press CTRL+C to quit
+
+💻 Usage Once the Flask application is running, open your web browser:
+poultry detect Classification Tool:
+Go to http://127.0.0.1:5000/ (for access from your local machine).
+If running on 0.0.0.0, others on your same local network can access it using your computer's local IP address.
+On the page, click "Choose File", select a blood cell image (JPEG or PNG), and click "Classify Image" to see the prediction.
+Interactive Project Overview (README):
+Go to http://127.0.0.1:5000/project-overview in your browser.
+This page provides a comprehensive, interactive overview of the project's details, features, and technical aspects.
+
 # Project Lead: Vaddimeyani Ajaykumar
 # Team ID : LTVIP2025TMID41509
 # Team members : Vadlamudi Bavanchandu ,Y Lavanya
