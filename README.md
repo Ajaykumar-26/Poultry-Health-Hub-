@@ -1,4 +1,4 @@
-# PoultryGuard – A Deep Learning-Powered Web App for Poultry Disease Prediction using Transfer Learning.
+# PoultryGuard – A Deep Learning Odyssey in Poultry Disease Detection via Transfer Learning
 # https://ornate-puppy-6f0f00.netlify.app/
 # PoultryGuard 🐔  
 ### A Deep Learning Odyssey in Poultry Disease Detection via Transfer Learning
