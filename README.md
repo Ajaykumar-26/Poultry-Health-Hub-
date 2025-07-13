@@ -115,7 +115,7 @@ On the page, click "Choose File", select a poultry disease image (JPG or PNG), a
 # Team members : Vadlamudi Bavanchandu ,Y Lavanya
 # Email : Ajaykumarv2609@gmail.com
 # Smart Bridge Internship: https://apsche.smartinternz.com/ Developed as part of the Smart Bridge Artificial Intelligence and Machine learning Internship Program
-# Demolink: https://drive.google.com/file/d/1pTcaClWY4CO2W57iC9vSlfgwn-49IzAe/view?usp=drivesdk
+# Demolink: [https://drive.google.com/file/d/1pTcaClWY4CO2W57iC9vSlfgwn-49IzAe/view?usp=drivesdk](https://drive.google.com/file/d/1pTcaClWY4CO2W57iC9vSlfgwn-49IzAe/view?usp=sharing)
 Developed as part of the Smart Bridge AI Internship Program.
 ⚙ Installation
 git clone https://github.com/Ajaykumar-26/Poultry-Health-Hub-/tree/main?tab=readme-ov-file
